@@ -105,6 +105,6 @@ Este projeto é licenciado sob a [Licença MIT](LICENSE).
 
 Para mais informações, entre em contato com:
 
-- **Autor**: Antônio Thiago
-- **Email**: atn.coding@gmail.com
-- **GitHub**: [Antonio-coding](https://github.com/Antonio-coding)
+- **Autor**: Antônio Thiago e Hannah Sales
+- **Email**: atn.coding@gmail.com 
+- **GitHub**: [Antonio-coding](https://github.com/Antonio-coding)  [HannahSales04](https://github.com/HannahSales04)

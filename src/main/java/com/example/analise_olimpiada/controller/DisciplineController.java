@@ -1,19 +1,22 @@
 package com.example.analise_olimpiada.controller;
 
 import com.example.analise_olimpiada.model.Discipline;
-import com.example.analise_olimpiada.service.OlympicService;
+import com.example.analise_olimpiada.service.DisciplineService;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.yaml.snakeyaml.events.Event;
 
+
 @RestController
-public class OlympicController {
+@RequestMapping("/olympic-games") // Adicione o prefixo aqui
+public class DisciplineController {
 
   @Autowired
-  private OlympicService olympicService;
+  private DisciplineService olympicService;
 
   @GetMapping("/disciplines")
   public List<Discipline> getDisciplines() {
@@ -31,7 +34,6 @@ public class OlympicController {
     @RequestParam(required = false) String venue,
     @RequestParam(defaultValue = "1") int page
   ) {
-    return null;
-    // Implementação do filtro de eventos
+    return null; // Falta implementação
   }
 }

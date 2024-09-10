@@ -1,5 +1,7 @@
 package com.example.analise_olimpiada.model;
 
+// import java.util.List;
+
 public class Discipline {
 
   private String code; // Código de 3 letras, ex: "ATH" (Atletismo)
@@ -23,4 +25,6 @@ public class Discipline {
   public void setName(String name) {
     this.name = name;
   }
+
+
 }

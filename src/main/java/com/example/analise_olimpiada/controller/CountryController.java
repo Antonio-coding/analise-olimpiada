@@ -15,8 +15,10 @@ public class CountryController {
     @Autowired
     private CountryService countryService;
 
-    @GetMapping("/countries")
-    public List<Country> getCountries() {
-        return countryService.getCountries();
+       @GetMapping("/{id}")
+    public ResponseEntity<Country> findById(@PathVariable Long id) {
+        return countryService.findById(id)
+                .map(ResponseEntity::ok)
+                .orElse(ResponseEntity.notFound().build());
     }
 }

@@ -5,5 +5,4 @@ import java.util.List;
 
 public interface DisciplineRepository {
     List<Discipline> fetchDisciplines();
-    // List<Country> fetchCountries();
 }

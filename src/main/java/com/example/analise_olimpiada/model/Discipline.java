@@ -1,30 +1,14 @@
 package com.example.analise_olimpiada.model;
 
-// import java.util.List;
-
 public class Discipline {
+    private String name;
 
-  private String code; // Código de 3 letras, ex: "ATH" (Atletismo)
+    // Getters e Setters
+    public String getName() {
+        return name;
+    }
 
-  public String getCode() {
-    return code;
-  }
-
-  public void setCode(String code) {
-    this.code = code;
-  }
-
-  private String name;
-
-  // Getters e Setters
-
-  public String getName() {
-    return name;
-  }
-
-  public void setName(String name) {
-    this.name = name;
-  }
-
-
+    public void setName(String name) {
+        this.name = name;
+    }
 }

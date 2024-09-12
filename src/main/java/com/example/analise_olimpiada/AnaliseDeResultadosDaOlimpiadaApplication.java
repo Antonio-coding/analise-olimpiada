@@ -8,5 +8,6 @@ public class AnaliseDeResultadosDaOlimpiadaApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(AnaliseDeResultadosDaOlimpiadaApplication.class, args);
+        //How create a string extenal api?
     }
 }

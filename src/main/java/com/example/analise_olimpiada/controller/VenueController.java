@@ -1,21 +1,21 @@
 package com.example.analise_olimpiada.controller;
 
-import com.example.analise_olimpiada.model.Country;
-import com.example.analise_olimpiada.service.CountryService;
+import com.example.analise_olimpiada.model.Venue;
+import com.example.analise_olimpiada.service.VenueService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/countries")
-public class CountryController {
+@RequestMapping("/venues")
+public class VenueController {
 
   @Autowired
-  private CountryService countryService;
+  private VenueService venueService;
 
   @GetMapping
-  public Country[] getCountries() {
-    return countryService.getCountries();
+  public Venue[] getVenues() {
+    return venueService.getVenues();
   }
 }

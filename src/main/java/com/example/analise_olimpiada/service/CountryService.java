@@ -1,18 +1,18 @@
 package com.example.analise_olimpiada.service;
 
 import com.example.analise_olimpiada.model.Country;
-import com.example.analise_olimpiada.repository.CountryRepository;
-import org.springframework.beans.factory.annotation.Autowired;
+
 import org.springframework.stereotype.Service;
-import java.util.List;
+import org.springframework.web.client.RestTemplate;
 
 @Service
 public class CountryService {
+    private final String BASE_URL = "https://apis.codante.io/olympic-games/countries";
+    private final RestTemplate restTemplate = new RestTemplate();
 
-    @Autowired
-    private CountryRepository countryRepository;
-
-    public List<Country> getCountries() {
-        return countryRepository.fetchCountries();
+    public Country[] getCountries() {
+        return restTemplate.getForObject(BASE_URL, Country[].class);
     }
 }
+
+

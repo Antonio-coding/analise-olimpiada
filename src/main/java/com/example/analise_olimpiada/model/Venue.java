@@ -1,9 +1,10 @@
 package com.example.analise_olimpiada.model;
 
-public class Discipline {
+
+public class Venue {
     private String id;
     private String name;
-    private String pictogramUrl;
+    private String url;
     // getters and setters
     public String getId() {
         return id;
@@ -17,10 +18,10 @@ public class Discipline {
     public void setName(String name) {
         this.name = name;
     }
-    public String getPictogramUrl() {
-        return pictogramUrl;
+    public String getUrl() {
+        return url;
     }
-    public void setPictogramUrl(String pictogramUrl) {
-        this.pictogramUrl = pictogramUrl;
+    public void setUrl(String url) {
+        this.url = url;
     }
 }

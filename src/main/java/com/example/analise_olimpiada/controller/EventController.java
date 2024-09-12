@@ -1,23 +1,27 @@
 package com.example.analise_olimpiada.controller;
 
-import com.example.analise_olimpiada.model.Country;
-import com.example.analise_olimpiada.service.CountryService;
+import com.example.analise_olimpiada.model.Event;
+import com.example.analise_olimpiada.service.EventService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/countries")
-public class CountryController {
+@RequestMapping("/events")
+public class EventController {
 
   @Autowired
-  private CountryService countryService;
+  private EventService eventService;
 
   @GetMapping
-  public Country[] getCountries() {
-    return countryService.getCountries();
+  public Event[] getEvents() {
+    return eventService.getEvents();
+  }
+
+  @GetMapping("/{id}")
+  public Event getEventById(@PathVariable int id) {
+    return eventService.getEventById(id);
   }
 }
